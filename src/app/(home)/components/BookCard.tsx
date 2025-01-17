@@ -9,7 +9,7 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+    <div className="bg-white shadow-lg rounded-lg mt-10 overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
       {/* Book Cover */}
       <Image
         height={1000}
