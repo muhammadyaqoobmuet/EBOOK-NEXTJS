@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className={`w-full p-4  bg-orange-100/10 ${poppins.className}`}>
       <div className="flex justify-between items-center">
-        <div className="logo font-bold text-2xl ">Coders Book</div>
+        <div className="logo font-bold text-2xl tracking-tighter">OS BOOKS</div>
         <div className="flex gap-4">
           <Button
             asChild
