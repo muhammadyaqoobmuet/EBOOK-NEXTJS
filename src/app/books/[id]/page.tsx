@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 async function SingleBook({ params }: { params: { id: string } }) {
-  const { id } = params;
+  const { id } = await params;
 
   // Fetch the book data from the API
   const resp = await fetch(`http://localhost:8080/api/books/${id}`);
