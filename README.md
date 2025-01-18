@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simple Book Management App
 
-## Getting Started
+A simple Next.js application built with **TypeScript** and **Node.js** that allows users to **upload**, **download**, and **edit** their uploaded books. This app includes a login feature, ensuring that only authenticated users can download books. Unauthorized users will not be able to access or download any books.
 
-First, run the development server:
+## Features
+
+- **User Authentication**: Users must log in to download or edit books.
+- **Upload Books**: Users can upload books to the platform.
+- **Download Books**: Users can download books they have uploaded.
+- **Edit Books**: Users can edit their previously uploaded books.
+- **Secure Access**: Unauthorized users are restricted from downloading or editing books.
+
+## Technologies Used
+
+- **Frontend**: Next.js with TypeScript
+- **Backend**: Node.js with Express.js (API routes for user authentication, book uploads, downloads, and editing)
+- **Database**: (Optional, you can mention if you're using MongoDB, PostgreSQL, etc.)
+
+## Setup
+
+### 1. Clone the Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/simple-book-management-app.git
+cd simple-book-management-app
+```
+
+### 2. Install Dependencies
+
+Install both frontend and backend dependencies:
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env` file in the root of the project and configure the necessary environment variables:
+
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+JWT_SECRET=your_jwt_secret_key
+MONGO_URI=your_mongo_connection_string
+```
+
+### 4. Run the Application
+
+To run the Next.js application in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the frontend and backend servers.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Test API Endpoints
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app uses the following API endpoints for uploading, downloading, and editing books:
 
-## Learn More
+- **User Login**: `POST /api/auth/login`
+- **Upload Book**: `POST /api/books/upload`
+- **Download Book**: `GET /api/books/download/:id`
+- **Edit Book**: `PUT /api/books/edit/:id`
 
-To learn more about Next.js, take a look at the following resources:
+You can find more details about these API routes in the separate repository covering the backend API:  
+[Backend API Repository](https://github.com/muhammadyaqoobmuet/Master-REST-APIs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/pages
+  /api
+    auth.js
+    books.js
+/src
+  /components
+  /lib
+  /pages
+```
