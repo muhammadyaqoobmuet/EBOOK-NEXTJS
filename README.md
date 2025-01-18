@@ -14,7 +14,7 @@ A simple Next.js application built with **TypeScript** and **Node.js** that allo
 
 - **Frontend**: Next.js with TypeScript
 - **Backend**: Node.js with Express.js (API routes for user authentication, book uploads, downloads, and editing)
-- **Database**: (Optional, you can mention if you're using MongoDB, PostgreSQL, etc.)
+- **Database**:  MongoDB.
 
 ## Setup
 
