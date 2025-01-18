@@ -3,14 +3,12 @@ import React from "react";
 import BookCard from "./BookCard";
 import { Book } from "@/types";
 
-
-  const resp = await fetch(`${process.env.BACKEND_URL}/books`, {
-    cache: "no-store",
-  });
-  if (!resp.ok) {
-    throw new Error("An error occurred while fetching data");
-  }
-
+const resp = await fetch(`${process.env.BACKEND_URL}/books`, {
+  cache: "no-store",
+});
+if (!resp.ok) {
+  throw new Error("An error occurred while fetching data");
+}
 
 const data = await resp?.json();
 const books = await data.books;
